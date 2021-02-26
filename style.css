@@ -1,0 +1,53 @@
+header{
+  text-align:center;
+  margin-bottom:10px;
+}
+
+body{
+  font-family:Tahoma;
+}
+
+table {
+  margin-top : 10px;
+  width:100%;
+}
+
+form{
+  display : grid;
+}
+
+.day {
+  height:50px;
+  text-align:center;
+}
+
+.sat{
+  color:blue;
+}
+
+.sun{
+  color:red;
+}
+
+.lostday{
+  background-color:lightgray;
+}
+
+#leftbutton{
+  display:inline;
+  background-color: white;
+}
+
+#rightbutton{
+  background-color: white;
+  float: right;
+}
+
+.today{
+  background-color : aqua;
+}
+
+.nowCalender{
+  text-align: center;
+}
+
