@@ -1,4 +1,4 @@
-const week=document.querySelector('table');
+const table=document.querySelector('table');
 const CalenderDate=document.querySelector(".js-date");
 const nowCalender=document.querySelector('.nowCalender');
 
@@ -74,7 +74,7 @@ function createDate(thatyear,thatmonth){
 
     }
     firstDate=0;
-    week.appendChild(tr);
+    table.appendChild(tr);
   }
 }
 
@@ -115,12 +115,32 @@ function handlerightButton(event){
   createDate(fakeYear,fakeMonth);
 }
 
+function winopen(){
+  const ret=window.open('schedule.html',"scheduler","left=50,top=50,width=800,height=600");
+  return ret;
+}
 
+function forTitle(text,id){
+  const title=text.document.querySelector('body');
+  title.innerText=id;
+}
+
+function clickhandler(event){
+  event.preventDefault();
+  const win=winopen();
+  const id=event.target.id;
+  forTitle(win,id);
+}
+
+function click(){
+  table.addEventListener("click",clickhandler);
+}
 
 function init(){
   buttonClicker();
   todayDate();
   createDate(year,month);
+  click();
 }
 
 init();
