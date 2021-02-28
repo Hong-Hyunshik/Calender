@@ -45,7 +45,7 @@ function createDate(thatyear,thatmonth){
     }
     for (let daycounter=firstDate;daycounter<7;daycounter++){
       if (number<=lastMonthDay){
-        const td=document.createElement('td');  
+        const td=document.createElement('td');
         td.innerText=number;
         td.classList.add(DAY);
         if (daycounter===0){
@@ -64,13 +64,13 @@ function createDate(thatyear,thatmonth){
           td.classList.add(LD);
         }
         else if (year===thatyear&&month===thatmonth&&number===date){
-          td.classList.add(TD); 
+          td.classList.add(TD);
         }
         td.id=`${thatyear}.${thatmonth+1}.${number}`;
         tr.appendChild(td);
-        number=number+1;  
+        number=number+1;
       }
-      
+
     }
     firstDate=0;
     week.appendChild(tr);
@@ -117,7 +117,7 @@ function handlerightButton(event){
 
 
 function init(){
-  buttonClicker();  
+  buttonClicker();
   todayDate();
   createDate(year,month);
 }
