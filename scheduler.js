@@ -6,6 +6,8 @@ function winopen(){
 }
 
 function forTitle(text,id){
+  console.log(text);
+  console.log(text.document);
   const title=text.document.querySelector('.js-title');
   title.innerText=id;
 }
