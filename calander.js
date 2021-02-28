@@ -125,16 +125,12 @@ function forTitle(text,id){
   title.innerText=id;
 }
 
-function storeLocal(id){
-  window.localStorage.setItem(id,'True');
-}
 
 function clickhandler(event){
   event.preventDefault();
   const win=winopen();
   const id=event.target.id;
   forTitle(win,id);
-  storeLocal(id);
 }
 
 function click(){
