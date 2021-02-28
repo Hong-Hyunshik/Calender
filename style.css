@@ -51,6 +51,6 @@ form{
   text-align: center;
 }
 
-th{
+th,tr{
   width:14%
 }
