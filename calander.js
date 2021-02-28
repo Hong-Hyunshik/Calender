@@ -126,7 +126,7 @@ function forTitle(text,id){
 }
 
 function storeLocal(id){
-  window.localStorage.setItem(id,True);
+  window.localStorage.setItem(id,'True');
 }
 
 function clickhandler(event){
