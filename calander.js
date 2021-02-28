@@ -65,6 +65,7 @@ function createDate(thatyear,thatmonth){
         }
         else if (year===thatyear&&month===thatmonth&&number===date){
           td.classList.add(TD);
+          td.innerText=`{number}(오늘!)`
         }
         td.id=`${thatyear}.${thatmonth+1}.${number}`;
         tr.appendChild(td);
