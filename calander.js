@@ -92,7 +92,6 @@ function buttonClicker(){
 }
 
 function handleleftButton(event){
-  event.preventDefault();
   if (1<=fakeMonth && fakeMonth<=11){
     fakeMonth-=1;
   }
@@ -104,7 +103,6 @@ function handleleftButton(event){
 }
 
 function handlerightButton(event){
-  event.preventDefault();
   if (0<=fakeMonth && fakeMonth<=10){
     fakeMonth+=1;
   }
@@ -121,13 +119,13 @@ function winopen(){
 }
 
 function forTitle(text,id){
-  const title=text.document.querySelector('body');
+  const title=text.document.querySelector('.js-title');
   title.innerText=id;
+  console.log(text.document);
 }
 
 
 function clickhandler(event){
-  event.preventDefault();
   const win=winopen();
   const id=event.target.id;
   forTitle(win,id);
