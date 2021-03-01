@@ -118,8 +118,8 @@ function winopen(){
   return ret;
 }
 
-function forTitle(text,id){
-  const title=text.document.querySelector('title');
+async function forTitle(text,id){
+  const title=text.document;
   title.innerText=id;
   console.log(title);
 }
@@ -128,7 +128,7 @@ function forTitle(text,id){
 function clickhandler(event){
   const win=winopen();
   const id=event.target.id;
-  setInterval(forTitle(win,id),1000);
+  forTitle(win,id);
 }
 
 function click(){
