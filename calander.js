@@ -119,15 +119,15 @@ function winopen(){
 }
 
 function forTitle(text,id){
-  const title=text.document.querySelector('title');
-  title.innerText=id;
+  const title=text.document.querySelector('.js-title');
+  console.log(text.document);
 }
 
 
 function clickhandler(event){
   const win=winopen();
   const id=event.target.id;
-  forTitle(win,id);
+  setInterval(forTitle(win,id),1000);
 }
 
 function click(){
