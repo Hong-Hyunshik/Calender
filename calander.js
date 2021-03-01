@@ -119,8 +119,9 @@ function winopen(){
 }
 
 function forTitle(text,id){
-  const title=text.document.querySelector('.js-title');
-  console.log(text.document);
+  const title=text.document.querySelector('title');
+  title.innerText=id;
+  console.log(title);
 }
 
 
