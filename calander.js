@@ -115,20 +115,23 @@ function handlerightButton(event){
 
 function winopen(){
   const ret=window.open('schedule.html',"scheduler","left=50,top=50,width=800,height=600");
+  console.log('1');
   return ret;
 }
 
-async function forTitle(text,id){
+function forTitle(text,id){
   const title=text.document;
-  title.innerText=id;
   console.log(title);
+  console.log('3');
 }
 
 
-function clickhandler(event){
-  const win=winopen();
+async function clickhandler(event){
+  const win=await winopen();
   const id=event.target.id;
+  console.log('2');
   forTitle(win,id);
+
 }
 
 function click(){
