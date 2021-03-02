@@ -115,8 +115,8 @@ function handlerightButton(event){
 
 
 function forTitle(text,id){
-  const title=text.document;
-  console.log(title);
+  const title=text.document.querySelector('body');
+  console.log(text.document);
 }
 
 function winopen(){
@@ -127,8 +127,8 @@ function winopen(){
 
 async function clickhandler(event){
   let win=await winopen();
-  let id=event.target.id;
-  forTitle(win,id);
+  let id=await event.target.id;
+  await forTitle(win,id);
 }
 
 function click(){
